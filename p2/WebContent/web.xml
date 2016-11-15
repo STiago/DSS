@@ -17,7 +17,7 @@
     <description></description>
     <display-name>ListaCorreosServlet</display-name>
     <servlet-name>ListaCorreosServlet</servlet-name>
-    <servlet-class>P2.comunicacion.ListaCorreosServlet</servlet-class>
+    <servlet-class>p2.comunicacion.ListaCorreosServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>ListaCorreosServlet</servlet-name>
