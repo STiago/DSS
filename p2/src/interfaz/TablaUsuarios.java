@@ -14,7 +14,9 @@ public class TablaUsuarios extends AbstractTableModel{
     }
     @Override
     public int getRowCount() {
-        return lista.size();
+    	if(lista != null)
+           return lista.size();
+    	return 0;
     }
     @Override
     public int getColumnCount() {
@@ -27,7 +29,7 @@ public class TablaUsuarios extends AbstractTableModel{
 		}
     	return true;
     }
-    //Para añadir un usuario a la tabla
+    //Para aï¿½adir un usuario a la tabla
     public void add(Usuario usuario) {
         lista.add(usuario);
         fireTableDataChanged();

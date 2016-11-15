@@ -3,6 +3,7 @@ package modelo;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
@@ -86,7 +87,7 @@ public class BDUsuario {
 		Query q = em.createQuery("SELECT u FROM Usuario u WHERE u.email = :email");
 		q.setParameter("email", email);
 		
-		if(q!=null){
+		/*if(q!=null){
 			q.getResultList();
 			q.getSingleResult();
 			em.close();
@@ -94,7 +95,15 @@ public class BDUsuario {
 		}else{
 			em.close();
 			return false;
-		}
+		}*/
+		try {
+			q.getSingleResult();
+			return true;
+		} catch (NoResultException e) {
+			return false;
+		} finally {
+			em.close();
+}
 		
 	}
 	

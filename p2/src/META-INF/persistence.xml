@@ -7,14 +7,14 @@
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver" />
 			<property name="javax.persistence.jdbc.url"
-				value="jdbc:derby:F:/home/victoria/Escritorio/MASTER/DSS/PRACTICAS;create=true" />
+				value="jdbc:derby:/home/victoria/Escritorio/MASTER/DSS/PRACTICAS/BD;create=true" />
 			<property name="javax.persistence.jdbc.user" value="test" />
 			<property name="javax.persistence.jdbc.password" value="test" />
 			<!-- Connection Pool -->
 			<property name="eclipselink.connection-pool.default.initial" value="1" />
 			<property name="eclipselink.connection-pool.node2.min" value="16"/>
 			<property name="eclipselink.connection-pool.node2.max" value="16"/>
-			<property name="eclipselink.connection-pool.node2.url" value="jdbc:derby:F:/home/victoria/Escritorio/MASTER/DSS/PRACTICAS;create=true"/>
+			<property name="eclipselink.connection-pool.node2.url" value="jdbc:derby:/home/victoria/Escritorio/MASTER/DSS/PRACTICAS/BD;create=true"/>
 			<!-- EclipseLink debe crear este esquema de base de datos automaticamente -->
 			<property name="eclipselink.ddl-generation" value="create-tables" />
 			<property name="eclipselink.ddl-generation.output-mode"
