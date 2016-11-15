@@ -18,11 +18,7 @@ public class Usuario implements Serializable {
 	private String email;//su direccion de correo electronico
     //Constructores
 	//Para construir un usuario vacio
-	public Usuario() {
-		nombre = "";
-		apellido = "";
-		email = "";
-	}
+	public Usuario() {	}
 	
 	//Constructor de copia
 	public Usuario(Usuario us) {
