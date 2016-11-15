@@ -1,6 +1,5 @@
-package modelo;
-
 import java.io.Serializable;
+
 import javax.persistence.Id;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,9 +12,9 @@ public class Usuario implements Serializable {
 @Id
 @GeneratedValue(strategy = GenerationType.TABLE)
 	private long id; //Identificador numerico del usuario
-	private String nombre;//nombre del usuario
+	private String nombre;//nombre del usuari
 	private String apellido;//appellidos del usuario
-	private String email;//su direccion de correo electronico
+	private String email;//su direccion de correo electronic
     //Constructores
 	//Para construir un usuario vacio
 	public Usuario() {
@@ -67,7 +66,6 @@ public class Usuario implements Serializable {
 		return email;
 	}
 
-	//Insertar el email del usuario
 	public void setEmail(String email) {
 		this.email = email;
 	}
