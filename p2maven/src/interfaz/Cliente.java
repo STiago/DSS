@@ -67,7 +67,7 @@ public class Cliente extends JFrame implements ActionListener{
 			+ "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
 	final Pattern pattern = Pattern.compile(EXPR_REG_EMAIL);
 	
-	public static String urlString = "http://localhost:8080/proyectodss/ListaCorreosServlet";
+	public static String urlString = "http://localhost:8080/p2/ListaCorreosServlet";
 
 	private TablaUsuarios modeloTablaUsuarios;
 	

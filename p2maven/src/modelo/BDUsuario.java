@@ -12,19 +12,19 @@ import modelo.Usuario;
 public class BDUsuario {
 	private static final String PERSISTENCE_UNIT_NAME = "usuario";
 	private static EntityManagerFactory factoria = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-	//EntityManager em = factoria.createEntityManager();
+	EntityManager em = factoria.createEntityManager();
 	
 	//Insertar un usuario pero si ya existe no hace nada
 	public static void insertar(Usuario usuario) {
 		
 		EntityManager em = factoria.createEntityManager();
 		
-		if (!existeEmail(usuario.getEmail())) {
+		//if (!existeEmail(usuario.getEmail())) {
 			em.getTransaction().begin();
 			em.persist(usuario);
 			em.getTransaction().commit();
 			em.close();
-		}/*else{
+		/*}else{
 			System.out.println ("");
 		}*/
 	}
@@ -84,7 +84,8 @@ public class BDUsuario {
 		
 		EntityManager em = factoria.createEntityManager();
 		
-		Query q = em.createQuery("SELECT u FROM Usuario u WHERE u.email LIKE :email").setParameter("email", email);
+		Query q = em.createQuery("SELECT u FROM Usuario u WHERE u.email = :email");
+		q.setParameter("email", email);
 		
 		/*if(q!=null){
 			q.getResultList();
@@ -102,14 +103,14 @@ public class BDUsuario {
 			return false;
 		} finally {
 			em.close();
-        }
+}
 		
 	}
 	
 	//Mostrar la lista de todos los usuarios que hay
 	@SuppressWarnings("unchecked")
 	public static List<Usuario> listarUsuarios() {
-		//EntityManagerFactory factoria = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		
 		EntityManager em = factoria.createEntityManager();
 		
 		Query q = em.createQuery("SELECT u FROM Usuario u");

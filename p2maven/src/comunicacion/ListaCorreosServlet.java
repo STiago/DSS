@@ -1,17 +1,16 @@
 package comunicacion;
 
+import java.io.*;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
-
 import java.util.List;
+import javax.servlet.*;
+import javax.servlet.http.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import modelo.BDUsuario;
 import modelo.Usuario;
-
-import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 
 public class ListaCorreosServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -20,23 +19,23 @@ public class ListaCorreosServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doPost(request, response);
-    }
+	}
 	
 	//Método POST
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
-		
 		String accion = request.getParameter("action");
 		
 		if (accion == null) {	
 			response.setContentType("text/html");		
-						
+			
+			
 			PrintWriter writer = response.getWriter();	
-			//Tabla
+			//tabla
 			writer.println("<h1>Listado de usuarios</h1>");
 			writer.println("<table>");
 			writer.println("<thead>");
-			writer.println("<tr><th> Nombre </th><th> Apellidos </th><th> Email </th>");
+			writer.println("<tr><th>Nombre</th><th>Apellidos</th><th>Email</th>");
 			writer.println("</tr>");
 			writer.println("</thead>");
 			writer.println("<tbody>");
@@ -53,7 +52,7 @@ public class ListaCorreosServlet extends HttpServlet {
 			String apellido = request.getParameter("apellido");
 			String email = request.getParameter("email");
 			
-			ObjectOutputStream oos = new ObjectOutputStream(response.getOutputStream()); 
+			ObjectOutputStream oos = new ObjectOutputStream(response.getOutputStream()); // obtiene ObjectOutputStream donde se informará del resultado
 			
 			switch (accion) {
 			case "aniadirUsuario":
@@ -102,6 +101,6 @@ public class ListaCorreosServlet extends HttpServlet {
 			oos.flush();
 			oos.close();
 		} 		
-	}
+	}	
 }
 

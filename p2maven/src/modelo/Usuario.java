@@ -18,17 +18,13 @@ public class Usuario implements Serializable {
 	private String email;//su direccion de correo electronico
     //Constructores
 	//Para construir un usuario vacio
-	public Usuario() {	
-		nombre = "";
-		apellido = "";
-		email = "";
-	}
+	public Usuario() {	}
 	
 	//Constructor de copia
 	public Usuario(Usuario us) {
-		this.nombre = us.getNombre();
-		this.apellido = us.getApellido();
-		this.email = us.getEmail();
+		nombre = us.getNombre();
+		apellido = us.getApellido();
+		email = us.getEmail();
 	}
 	
 	//Metodos get y set
