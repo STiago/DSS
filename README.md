@@ -11,3 +11,5 @@ Respositorio de practicas de la asignatura DSS del Master en Ingenier√≠a Inform√
 
 - JPA : https://www.tutorialspoint.com/es/jpa/jpa_introduction.htm
 - Tutorial JPA (Java Persistence API) : http://codigo-util.blogspot.com.es/2010/06/tutorial-de-jpa-java-persistence-api.html
+
+- Tutorial REST: http://www.vogella.com/tutorials/REST/article.html
