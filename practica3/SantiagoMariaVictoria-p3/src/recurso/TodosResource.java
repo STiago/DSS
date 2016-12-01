@@ -64,16 +64,16 @@ public class TodosResource {
         @Produces(MediaType.TEXT_HTML)
         @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
         public void newTodo(@FormParam("id") String id,
-                        @FormParam("summary") String summary,
+                        @FormParam("autor") String autor,
                         @FormParam("description") String description,
                         @Context HttpServletResponse servletResponse) throws IOException {
-                Todo todo = new Todo(id, summary);
+                Todo todo = new Todo(id, autor);
                 if (description != null) {
                         todo.setDescription(description);
                 }
                 TodoDao.instance.getModel().put(id, todo);
 
-                servletResponse.sendRedirect("../create_todo.html");
+                servletResponse.sendRedirect("../todos");
         }
 
         // Defines that the next path parameter after todos is

@@ -1,3 +1,4 @@
+/*Este es el de tests*/
 package cliente;
 
 import java.util.HashMap;
@@ -13,10 +14,10 @@ public enum TodoDao {
         private TodoDao() {
 
                 Todo todo = new Todo("1", "Learn REST");
-                todo.setDescription("Read tutoriall");
+                todo.setDescription("Leer tutorial");
                 contentProvider.put("1", todo);
                 todo = new Todo("2", "Do something");
-                todo.setDescription("Read STiago GitHub");
+                todo.setDescription("Leer informacion de STiago GitHub");
                 contentProvider.put("2", todo);
 
         }
