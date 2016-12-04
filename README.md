@@ -9,7 +9,9 @@ Respositorio de practicas de la asignatura DSS del Master en Ingeniería Inform�
 
 ###Enlaces a las prácticas:
 
-- PRACTICA 2. [PROGRAMACIÓN OO CON PERSISTENCIA DE ENTIDADES](https://github.com/STiago/DSS/blob/master/p2/memoria.pdf)
+- PRÁCTICA 2. [PROGRAMACIÓN OO CON PERSISTENCIA DE ENTIDADES](https://github.com/STiago/DSS/blob/master/p2/memoria.pdf)
+
+- PRÁCTICA 3. [IMPLEMENTACIÓN DE UN SERVICIO WEB CRUD EN JAVA](https://github.com/STiago/DSS/blob/master/practica3/Practicas%20Tema%203.pdf)
 
 ###Enlaces a bibliografía:
 
