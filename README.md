@@ -7,6 +7,10 @@ DSS Copyright (C) 2013 María Victoria Santiago Alcalá. This program is free so
 
 Respositorio de practicas de la asignatura DSS del Master en Ingeniería Informática.
 
+###Enlaces a las prácticas:
+
+- PRACTICA 2. [PROGRAMACIÓN OO CON PERSISTENCIA DE ENTIDADES](https://github.com/STiago/DSS/blob/master/p2/memoria.pdf)
+
 ###Enlaces a bibliografía:
 
 - JPA : https://www.tutorialspoint.com/es/jpa/jpa_introduction.htm
