@@ -17,15 +17,16 @@ import modelo.Instrumento;
 
 public class Tester {
   public static void main(String[] args) {
-
+	  
           ClientConfig config = new ClientConfig();
           Client client = ClientBuilder.newClient(config);
           WebTarget service = client.target(getBaseURI());
-
+          
           // Crea un 3º objeto Instrumento (hay otros 2 ya creados)
-          Instrumento instrumento = new Instrumento("3", "Guitarra", "Punteadas");
+          Instrumento instrumento = new Instrumento(" 3 ", " Guitarra ", " Punteadas ");
           Response response = service.path("rest").path("instrumentos").path(instrumento.getId()).request(MediaType.APPLICATION_XML).put(Entity.entity(instrumento,MediaType.APPLICATION_XML),Response.class);
-
+          
+          System.out.println("Hecho");
           // Al crearlo devuelve  201 == created resource
           System.out.println(response.getStatus());
 
@@ -49,9 +50,9 @@ public class Tester {
 
           //Crear un  Instrumento con formulario
           Form form =new Form();
-          form.param("id", "4");
-          form.param("nombre","Violin");
-          form.param("clasificacion", "Frotado");
+          form.param("id", " 4 ");
+          form.param("nombre"," Violin ");
+          form.param("clasificacion", " Frotado ");
           response = service.path("rest").path("instrumentos").request().post(Entity.entity(form,MediaType.APPLICATION_FORM_URLENCODED),Response.class);
           System.out.println("Respuesta " + response.getStatus());
 
