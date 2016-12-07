@@ -27,38 +27,37 @@ public class InstrumentoResource {
                 this.id = id;
         }
 
-        //Application integration
+        //Integracion
         @GET
         @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
-        public Instrumento getTodo() {
+        public Instrumento getInstrumento() {
                 Instrumento instrumento = InstrumentoDao.instance.getModel().get(id);
                 if(instrumento==null)
-                        throw new RuntimeException("Get: Todo con " + id +  " no encontrado");
+                        throw new RuntimeException("Get: Instrumento con " + id +  " no encontrado");
                 return instrumento;
         }
 
-        // for the browser
         @GET
         @Produces(MediaType.TEXT_XML)
-        public Instrumento getTodoHTML() {
+        public Instrumento getInstrumentoHTML() {
                 Instrumento instrumento = InstrumentoDao.instance.getModel().get(id);
                 if(instrumento==null)
-                        throw new RuntimeException("Get: Todo con " + id +  " no encontrado");
+                        throw new RuntimeException("Get: Instrumento con " + id +  " no encontrado");
                 return instrumento;
         }
 
         @PUT
         @Consumes(MediaType.APPLICATION_XML)
-        public Response putTodo(JAXBElement<Instrumento> instrumento) {
+        public Response putInstrumento(JAXBElement<Instrumento> instrumento) {
                 Instrumento c = instrumento.getValue();
                 return putAndGetResponse(c);
         }
 
         @DELETE
-        public void deleteTodo() {
+        public void deleteInstrumento() {
                 Instrumento c = InstrumentoDao.instance.getModel().remove(id);
                 if(c==null)
-                        throw new RuntimeException("Delete: Todo con " + id +  " no encontrado");
+                        throw new RuntimeException("Delete: Instumento con " + id +  " no encontrado");
         }
 
         private Response putAndGetResponse(Instrumento instrumento) {

@@ -20,38 +20,36 @@ import javax.ws.rs.core.UriInfo;
 import modelo.Instrumento;
 import modelo.InstrumentoDao;
 
-// Will map the resource to the URL todos
-@Path("/todos")
+// URL instrumentos
+@Path("/instrumentos")
 public class InstrumentosResource {
-
-        // Allows to insert contextual objects into the class,
-        // e.g. ServletContext, Request, Response, UriInfo
+	
         @Context
         UriInfo uriInfo;
         @Context
         Request request;
 
-        // Return the list of todos to the user in the browser
+        // Devuelve la lista d instrumentos en el browser
         @GET
         @Produces(MediaType.TEXT_XML)
-        public List<Instrumento> getTodosBrowser() {
+        public List<Instrumento> getInstrumentosBrowser() {
                 List<Instrumento> instrumentos = new ArrayList<Instrumento>();
                 instrumentos.addAll(InstrumentoDao.instance.getModel().values());
                 return instrumentos;
         }
 
-        // Return the list of todos for applications
+        // Devuelve la lista de instrumentos para aplicaciones
         @GET
         @Produces({ MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON })
-        public List<Instrumento> getTodos() {
+        public List<Instrumento> getInstrumentos() {
                 List<Instrumento> instrumentos = new ArrayList<Instrumento>();
                 instrumentos.addAll(InstrumentoDao.instance.getModel().values());
                 return instrumentos;
         }
 
-        // retuns the number of todos
-        // Use http://localhost:8080/com.vogella.jersey.todo/rest/todos/count
-        // to get the total number of records
+        /* Devuelve el numero de instrumentos
+           Para el uso http://localhost:8080/otro3/rest/instrumentos/count
+           devuelve el numero total de instrumentos guardados */
         @GET
         @Path("count")
         @Produces(MediaType.TEXT_PLAIN)
@@ -63,25 +61,23 @@ public class InstrumentosResource {
         @POST
         @Produces(MediaType.TEXT_HTML)
         @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
-        public void newTodo(@FormParam("id") String id,
-                        @FormParam("summary") String summary,
+        public void newInstrumento(@FormParam("id") String id,
+                        @FormParam("nombre") String nombre,
+                        @FormParam("clasificacion") String clasificacion,
                         @FormParam("description") String description,
                         @Context HttpServletResponse servletResponse) throws IOException {
-                Instrumento instrumento = new Instrumento(id, summary);
+                Instrumento instrumento = new Instrumento(id, nombre, clasificacion);
                 if (description != null) {
                         instrumento.setDescription(description);
                 }
                 InstrumentoDao.instance.getModel().put(id, instrumento);
 
-                servletResponse.sendRedirect("../create_todo.html");
+                servletResponse.sendRedirect("../create_instrumento.html");
         }
 
-        // Defines that the next path parameter after todos is
-        // treated as a parameter and passed to the TodoResources
-        // Allows to type http://localhost:8080/com.vogella.jersey.todo/rest/todos/1
-        // 1 will be treaded as parameter todo and passed to TodoResource
-        @Path("{todo}")
-        public InstrumentoResource getTodo(@PathParam("todo") String id) {
+        // Ejemplo para ver el primero http://localhost:8080/otro3/rest/instrumentos/1
+        @Path("{instrumento}")
+        public InstrumentoResource getInstrumento(@PathParam("instrumento") String id) {
                 return new InstrumentoResource(uriInfo, request, id);
         }
 

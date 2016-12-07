@@ -5,15 +5,17 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class Instrumento {
         private String id;
-        private String summary;
+        private String nombre;
+        private String clasificacion;
         private String description;
 
         public Instrumento(){
 
         }
-        public Instrumento (String id, String summary){
+        public Instrumento (String id, String nombre, String clasificacion){
                 this.id = id;
-                this.summary = summary;
+                this.nombre = nombre;
+                this.clasificacion = clasificacion;
         }
         public String getId() {
                 return id;
@@ -21,11 +23,17 @@ public class Instrumento {
         public void setId(String id) {
                 this.id = id;
         }
-        public String getSummary() {
-                return summary;
+        public String getnombre() {
+                return nombre;
         }
-        public void setSummary(String summary) {
-                this.summary = summary;
+        public void setnombre(String nombre) {
+                this.nombre = nombre;
+        }
+        public String getClasificacion(){
+        		return clasificacion;
+        }
+        public void setClasificacion(){
+        	   this.clasificacion = clasificacion;
         }
         public String getDescription() {
                 return description;
