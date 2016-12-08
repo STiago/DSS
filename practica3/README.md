@@ -4,7 +4,7 @@
 
 Jersey: http://www.vogella.com/tutorials/REST/article.htm
 
-#### Memoria de la realizacion de la practica
+#### Memoria de la realización de la práctica
 
 A continación en el siguiente enlace puede consultar la memoria donde se describe todo lo realizado en el desarrollo de la práctica 3.
 
