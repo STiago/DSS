@@ -13,9 +13,9 @@ Respositorio de practicas de la asignatura DSS del Master en Ingeniería Inform�
 
 - PRÁCTICA 3. [IMPLEMENTACIÓN DE UN SERVICIO WEB CRUD EN JAVA](https://github.com/STiago/DSS/tree/master/practica3)
 
-- PRÁCTICA 3. [IMPLEMENTACIÓN DE UN SERVICIO WEB CRUD EN JAVA](https://github.com/STiago/DSS/tree/master/practica3)
+- PRÁCTICA 4. [IMPLEMENTACIÓN BPEL](https://github.com/STiago/DSS/tree/master/practica4)
 
-- PRÁCTICA 5. [IMPLEMENTACIÓN DE UN SERVICIO WEB CRUD EN JAVA](https://github.com/STiago/DSS/tree/master/practica3)
+- PRÁCTICA 5. [IMPLEMENTACIÓN APLICACIÓN ANDROID](https://github.com/STiago/DSS/tree/master/practica5)
 
 ###Enlaces a bibliografía:
 
