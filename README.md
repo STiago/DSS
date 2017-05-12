@@ -5,7 +5,7 @@ DSS Copyright (C) 2013 María Victoria Santiago Alcalá. This program is free so
 
 Respositorio de prácticas de la asignatura DSS del Master en Ingeniería Informática.
 
-###Enlaces a las prácticas:
+### Enlaces a las prácticas:
 
 - PRÁCTICA 2. [PROGRAMACIÓN OO CON PERSISTENCIA DE ENTIDADES](https://github.com/STiago/DSS/tree/master/practica2)
 
@@ -15,7 +15,7 @@ Respositorio de prácticas de la asignatura DSS del Master en Ingeniería Inform
 
 - PRÁCTICA 5. [IMPLEMENTACIÓN APLICACIÓN ANDROID](https://github.com/STiago/DSS/tree/master/practica5)
 
-###Enlaces a bibliografía:
+### Enlaces a bibliografía:
 
 - JPA : https://www.tutorialspoint.com/es/jpa/jpa_introduction.htm
 - Tutorial JPA (Java Persistence API) : http://codigo-util.blogspot.com.es/2010/06/tutorial-de-jpa-java-persistence-api.html
