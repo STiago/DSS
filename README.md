@@ -7,6 +7,8 @@ Respositorio de prácticas de la asignatura DSS del Master en Ingeniería Inform
 
 ### Enlaces a las prácticas:
 
+- PRÁCTICA 1. [PROGRAMACIÓN DE COMPONENTES CON EL MARCO DE TRABAJO JSF Y MAVEN](https://github.com/STiago/DSS/tree/master/practica1)
+
 - PRÁCTICA 2. [PROGRAMACIÓN OO CON PERSISTENCIA DE ENTIDADES](https://github.com/STiago/DSS/tree/master/practica2)
 
 - PRÁCTICA 3. [IMPLEMENTACIÓN DE UN SERVICIO WEB CRUD EN JAVA](https://github.com/STiago/DSS/tree/master/practica3)
