@@ -1,5 +1,18 @@
 ## Práctica 1 - Aplicación Web utilizando JSF, JSP y servlets de Java
 
+### Tutorial inicial - Hello World
+
+El primer paso que se ha de realizar es instalar el material necesario y configurar el entorno correspondiente.
+* La practica se ha desarrollado en Ubuntu
+Para ello debemos de descargar los siguientes paquetes:
+
+- Eclipse Java Neon
+- Maven
+- Tomcat
+- Java Oracle 8
+
+Una vez descargados y descomprimidos
+
 ### Enlaces de interés
 
 - http://www.tutorialspoint.com/jsf/
