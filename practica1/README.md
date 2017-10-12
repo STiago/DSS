@@ -6,12 +6,20 @@ El primer paso que se ha de realizar es instalar el material necesario y configu
 * La practica se ha desarrollado en Ubuntu
 Para ello debemos de descargar los siguientes paquetes:
 
-- Eclipse Java Neon
-- Maven
+- Eclipse Java EE Neon
+- Maven 3.3.9
 - Tomcat
-- Java Oracle 8
+- Oracle JDK 8
 
-Una vez descargados y descomprimidos
+Una vez descargados y descomprimidos procedemos a ir configurando las herramientas una a una.
+
+#### Oracle JDK:
+EmpezamosEmpezamosEmpezamos por instalar el JDK, no debemos olvidar de configurar la variable JAVA_HOME la cual tiene que tener asignado el path de donde tenemos el JDK, en mi caso seria asi:
+
+export JAVA_HOME=/home/victoria/DSS/PRACTICAS/jdk1.8
+
+#### Maven
+Debemos de descomprimir 
 
 ### Enlaces de interés
 
