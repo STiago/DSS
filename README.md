@@ -5,6 +5,10 @@ DSS Copyright (C) 2013 María Victoria Santiago Alcalá. This program is free so
 
 Respositorio de prácticas de la asignatura DSS del Master en Ingeniería Informática.
 
+### Enlace a ejercicios:
+
+- [Ejercicios](https://github.com/STiago/DSS/tree/master/ejercicios)
+
 ### Enlaces a las prácticas:
 
 - PRÁCTICA 1. [PROGRAMACIÓN DE COMPONENTES CON EL MARCO DE TRABAJO JSF Y MAVEN](https://github.com/STiago/DSS/tree/master/practica1)
