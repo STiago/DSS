@@ -9,6 +9,11 @@ Respositorio de prácticas de la asignatura DSS del Master en Ingeniería Inform
 
 - [Ejercicios](https://github.com/STiago/DSS/tree/master/ejercicios)
 
+- [Ejercicios - OCL y UML](https://github.com/STiago/DSS/tree/master/ejercicios/OCL_UML)
+
+- [Ejercicios - Ontología](https://github.com/STiago/DSS/tree/master/ejercicios/Ontologia)
+
+
 ### Enlaces a las prácticas:
 
 - PRÁCTICA 1. [PROGRAMACIÓN DE COMPONENTES CON EL MARCO DE TRABAJO JSF Y MAVEN](https://github.com/STiago/DSS/tree/master/practica1)
