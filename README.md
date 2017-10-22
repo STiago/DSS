@@ -3,7 +3,7 @@ DSS Copyright (C) 2013 María Victoria Santiago Alcalá. This program is free so
 =======
 # Desarrollo de Software Basado en Componentes y Servicios
 
-Respositorio de prácticas de la asignatura DSS del Master en Ingeniería Informática.
+Respositorio de prácticas y ejercicios de la asignatura DSS del Master en Ingeniería Informática.
 
 ### Enlace a ejercicios:
 
