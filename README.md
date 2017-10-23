@@ -26,6 +26,10 @@ Respositorio de prácticas y ejercicios de la asignatura DSS del Master en Ingen
 
 - PRÁCTICA 5. [IMPLEMENTACIÓN APLICACIÓN ANDROID](https://github.com/STiago/DSS/tree/master/practica5)
 
+### Preguntas
+
+
+
 ### Enlaces a bibliografía:
 
 - JPA : https://www.tutorialspoint.com/es/jpa/jpa_introduction.htm
