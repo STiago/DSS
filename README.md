@@ -40,6 +40,7 @@ Respositorio de prácticas y ejercicios de la asignatura DSS del Master en Ingen
 - JPA : https://www.tutorialspoint.com/es/jpa/jpa_introduction.htm
 - Tutorial JPA (Java Persistence API) : http://codigo-util.blogspot.com.es/2010/06/tutorial-de-jpa-java-persistence-api.html
 - Patrón Interceptor: https://www.tutorialspoint.com/design_pattern/intercepting_filter_pattern.htm
+- Tutorial JSF y JPA: http://www.vogella.com/tutorials/JavaServerFaces/article.html#todojsf_run
 
 - Tutorial REST: http://www.vogella.com/tutorials/REST/article.html
 
