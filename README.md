@@ -9,7 +9,7 @@ Respositorio de prácticas y ejercicios de la asignatura DSS del Master en Ingen
 
 - [Ejercicios](https://github.com/STiago/DSS/tree/master/ejercicios)
 
-- [Ejercicios - OCL y UML](https://github.com/STiago/DSS/tree/master/ejercicios/OCL_UML)
+- [Ejercicios - matriculacion OCL y UML](https://github.com/STiago/DSS/tree/master/ejercicios/OCL_UML)
 
 - [Ejercicio vuelos OCL-UML](https://profesores.virtual.uniandes.edu.co/~isis4718/dokuwiki/doku.php?id=ocl_exercises)
 
