@@ -11,7 +11,7 @@ Respositorio de prácticas y ejercicios de la asignatura DSS del Master en Ingen
 
 - [Ejercicios - matriculacion OCL y UML](https://github.com/STiago/DSS/tree/master/ejercicios/OCL_UML)
 
-- [Ejercicio vuelos OCL-UML](https://profesores.virtual.uniandes.edu.co/~isis4718/dokuwiki/doku.php?id=ocl_exercises)
+- [Ejercicio vuelos OCL-UML](https://github.com/STiago/DSS/blob/master/ejercicios/OCL_UML/ejercicio_ocl_vuelos.pdf) 
 
 - [Ejercicios - Ontología](https://github.com/STiago/DSS/tree/master/ejercicios/Ontologia)
 
@@ -34,7 +34,8 @@ Respositorio de prácticas y ejercicios de la asignatura DSS del Master en Ingen
 - JPA : https://www.tutorialspoint.com/es/jpa/jpa_introduction.htm
 - Tutorial JPA (Java Persistence API) : http://codigo-util.blogspot.com.es/2010/06/tutorial-de-jpa-java-persistence-api.html
 - Patrón Interceptor: https://www.tutorialspoint.com/design_pattern/intercepting_filter_pattern.htm
-- Tutorial JSF y JPA: http://www.vogella.com/tutorials/JavaServerFaces/article.html#todojsf_run
+- Tutorial JSF y JPA: http://www.vogella.com/tutorials/JavaServerFaces/article.html#todojsf_ru
+- Ejercicios OCL: https://profesores.virtual.uniandes.edu.co/~isis4718/dokuwiki/doku.php?id=ocl_exercises
 - JSTL jar: http://www.java2s.com/Code/Jar/j/Downloadjstlimpl12jar.htm
 
 - Tutorial REST: http://www.vogella.com/tutorials/REST/article.html
