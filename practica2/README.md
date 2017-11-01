@@ -1,12 +1,12 @@
 ## Programación OO con persistencia de entidades
 
-###Enlaces de interés
+### Enlaces de interés
 
 - JPA : https://www.tutorialspoint.com/es/jpa/jpa_introduction.htm
 
 - Tutorial JPA (Java Persistence API) : http://codigo-util.blogspot.com.es/2010/06/tutorial-de-jpa-java-persistence-api.html
 
-###Memoria de la realización de la práctica
+### Memoria de la realización de la práctica
 
 A continación en el siguiente enlace puede consultar la memoria donde se describe todo lo realizado en el desarrollo de la práctica 2.
 
