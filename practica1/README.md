@@ -33,6 +33,8 @@ Debemos de descomprimir
 
 A continación en el siguiente enlace puede consultar la memoria donde se descri$
 
-- [Memoria](https://github.com/STiago/DSS/blob/master/practica1/memoria.pdf)
+- [Memoria](https://github.com/STiago/DSS/blob/master/practica1/SantiagoMVictoria-p1/Memoria-MVictoriaSantiago.pdf)
 
-- [Proyecto](https://github.com/STiago/DSS/tree/master/practica1/p1)
+- [UML](https://github.com/STiago/DSS/blob/master/practica1/SantiagoMVictoria-p1/uml_interceptor.pdf)
+
+- [Proyecto](https://github.com/STiago/DSS/tree/master/practica1/interceptor/first)
