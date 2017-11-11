@@ -2,3 +2,4 @@
 
 Se encuentra en el repositorio [HistoryQuiz](https://github.com/STiago/HistoryQuiz).
 
+Tutorial: https://www.developerfeed.com/simple-quiz-game-andriod/
