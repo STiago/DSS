@@ -9,6 +9,8 @@ Especificar utilizando BPEL el proceso de negocio (cuyo diagrama de actividad se
 
 Después, el proceso BPEL comprobará el precio del billete con 2 líneas aéreas: Iberia y Vueling. Supongamos otra vez que ambas compañías proporcionan un servicio Web contra el que se pueden realizar estas gestiones. El proceso BPEL seleccionará el precio más bajo y devolverá un plan de viaje al cliente”.
 
+![Diagram](https://github.com/STiago/DSS/tree/master/practica4/images/enunciado.png)
+
 #### 4.2. Comprador - vendedor
 
 ## Enlaces
