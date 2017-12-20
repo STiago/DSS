@@ -1,0 +1,104 @@
+<?xml version="1.0"?>
+<definitions name="PlanViaje" targetNamespace="http://planViaje"
+	xmlns:tns="http://planViaje" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		TYPE DEFINITION - List of types participating in this BPEL process The BPEL 
+		Designer will generate default request and response types but you can define 
+		or import any XML Schema type and use them as part of the message types. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<types>
+		<schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://planViaje" xmlns="http://www.w3.org/2001/XMLSchema">
+
+			<element name="PlanViajeRequest">
+				<complexType>
+					<sequence>
+						<element name="Nombre" type="string" />
+						<element name="Apellido" type="string"></element>
+						<element name="LugarOrigen" type="string"></element>
+						<element name="LugarDestino" type="string"></element>
+						<element name="FechaSalida" type="date"></element>
+						<element name="FechaLlegada" type="date"></element>
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="PlanViajeResponse">
+				<complexType>
+					<sequence>
+						<element name="ID_Vuelo" type="string"></element>
+						<element name="Nombre" type="string"></element>
+						<element name="Apellido" type="string"></element>
+						<element name="Clase" type="string"></element>
+						<element name="Origen" type="string"></element>
+						<element name="Destino" type="string"></element>
+						<element name="Salida" type="date"></element>
+						<element name="Llegada" type="date"></element>
+						<element name="mejorPrecio" type="double" />
+					</sequence>
+				</complexType>
+			</element>
+
+			<simpleType name="Clase">
+				<restriction base="string"></restriction>
+			</simpleType>
+		</schema>
+	</types>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		MESSAGE TYPE DEFINITION - Definition of the message types used as part of 
+		the port type defintions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<message name="PlanViajeRequestMessage">
+		<part name="payload" element="tns:PlanViajeRequest" />
+	</message>
+	<message name="PlanViajeResponseMessage">
+		<part name="payload" element="tns:PlanViajeResponse" />
+	</message>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PORT TYPE DEFINITION - A port type groups a set of operations into a logical 
+		service unit. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- portType implemented by the PlanViaje BPEL process -->
+	<portType name="PlanViaje">
+		<operation name="process">
+			<input message="tns:PlanViajeRequestMessage" name="input" />
+			<output message="tns:PlanViajeResponseMessage" name="output" />
+		</operation>
+	</portType>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PARTNER LINK TYPE DEFINITION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<plnk:partnerLinkType name="PlanViaje">
+		<plnk:role name="PlanViajeProvider" portType="tns:PlanViaje" />
+	</plnk:partnerLinkType>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		BINDING DEFINITION - Defines the message format and protocol details for 
+		a web service. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<binding name="PlanViajeBinding" type="tns:PlanViaje">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="process">
+			<soap:operation soapAction="http://planViaje/process" />
+			<input name="input">
+				<soap:body use="literal" />
+			</input>
+			<output name="output">
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		SERVICE DEFINITION - A service groups a set of ports into a service unit. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<service name="PlanViajeService">
+		<port name="PlanViajePort" binding="tns:PlanViajeBinding">
+			<soap:address location="http://localhost:8080/ode/processes/PlanViaje" />
+		</port>
+	</service>
+</definitions>

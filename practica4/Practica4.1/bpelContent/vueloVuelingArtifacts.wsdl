@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<definitions name="vueloVueling" targetNamespace="http://vueloVueling"
+	xmlns:tns="http://vueloVueling" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
+	xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		TYPE DEFINITION - List of types participating in this BPEL process The BPEL 
+		Designer will generate default request and response types but you can define 
+		or import any XML Schema type and use them as part of the message types. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<types>
+		<schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+			targetNamespace="http://vueloVueling" xmlns="http://www.w3.org/2001/XMLSchema">
+
+			<element name="vueloVuelingRequest">
+				<complexType>
+					<sequence>
+						<element name="origen" type="string" />
+						<element name="destino" type="string"></element>
+						<element name="salida" type="date"></element>
+						<element name="llegada" type="date"></element>
+						<element name="clase" type="tns:Clase"></element>
+					</sequence>
+				</complexType>
+			</element>
+
+			<element name="vueloVuelingResponse">
+				<complexType>
+					<sequence>
+						<element name="ID_Vuelo" type="string" />
+						<element name="TipoBillete" type="tns:Clase"></element>
+						<element name="HoraSalida" type="date"></element>
+						<element name="HoraLlegada" type="date"></element>
+						<element name="PrecioVueling" type="double"></element>
+					</sequence>
+				</complexType>
+			</element>
+
+			<simpleType name="Clase">
+				<restriction base="string"></restriction>
+			</simpleType>
+		</schema>
+	</types>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		MESSAGE TYPE DEFINITION - Definition of the message types used as part of 
+		the port type defintions ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<message name="vueloVuelingRequestMessage">
+		<part name="payload" element="tns:vueloVuelingRequest" />
+	</message>
+	<message name="vueloVuelingResponseMessage">
+		<part name="payload" element="tns:vueloVuelingResponse" />
+	</message>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PORT TYPE DEFINITION - A port type groups a set of operations into a logical 
+		service unit. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+	<!-- portType implemented by the vueloVueling BPEL process -->
+	<portType name="vueloVueling">
+		<operation name="process">
+			<input message="tns:vueloVuelingRequestMessage" />
+			<output message="tns:vueloVuelingResponseMessage" />
+		</operation>
+	</portType>
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		PARTNER LINK TYPE DEFINITION ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<plnk:partnerLinkType name="vueloVueling">
+		<plnk:role name="vueloVuelingProvider" portType="tns:vueloVueling" />
+	</plnk:partnerLinkType>
+
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		BINDING DEFINITION - Defines the message format and protocol details for 
+		a web service. ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<binding name="vueloVuelingBinding" type="tns:vueloVueling">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<operation name="process">
+			<soap:operation soapAction="http://vueloVueling/process" />
+			<input>
+				<soap:body use="literal" />
+			</input>
+			<output>
+				<soap:body use="literal" />
+			</output>
+		</operation>
+	</binding>
+
+	<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+		SERVICE DEFINITION - A service groups a set of ports into a service unit. 
+		~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+	<service name="vueloVuelingService">
+		<port name="vueloVuelingPort" binding="tns:vueloVuelingBinding">
+			<soap:address location="http://localhost:8080/ode/processes/vueloVueling" />
+		</port>
+	</service>
+</definitions>
